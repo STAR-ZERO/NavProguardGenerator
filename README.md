@@ -11,7 +11,30 @@ This plugin will generate prouard rule file for `argType` and apply to your `pro
 
 ## Install
 
-TODO
+Add below to top level `build.gradle`
+
+```groovy
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "com.star-zero.gradle:nav-proguard-generator:1.0.0"
+  }
+}
+
+subprojects {
+    // apply all sub projects
+    apply plugin: 'com.star-zero.gradle.nav-proguard-generator'
+}
+
+```
+
+## Usage
+
+No configuration, you just build your app. This plugin will create `nav-proguard-rule.pro`.
 
 ## License
 
