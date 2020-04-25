@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_feature"
+    app:startDestination="@id/featureFragment">
+
+    <fragment
+        android:id="@+id/featureFragment"
+        android:name="com.star_zero.gradle.nav_proguard_generator.sample.feature.FeatureFragment"
+        android:label="FeatureFragment">
+        <argument
+            android:name="featureData"
+            app:argType="com.star_zero.gradle.nav_proguard_generator.sample.feature.FeatureData" />
+    </fragment>
+</navigation>

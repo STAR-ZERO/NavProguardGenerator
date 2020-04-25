@@ -1,0 +1,4 @@
+include ':feature'
+include ':lib'
+include ':app'
+rootProject.name = "sample"

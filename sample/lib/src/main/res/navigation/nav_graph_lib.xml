@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_lib"
+    app:startDestination="@id/libFragment">
+
+    <fragment
+        android:id="@+id/libFragment"
+        android:name="com.star_zero.gradle.nav_proguard_generator.sample.lib.LibFragment"
+        android:label="LibFragment" >
+        <argument
+            android:name="libData"
+            app:argType="com.star_zero.gradle.nav_proguard_generator.sample.lib.LibData" />
+    </fragment>
+</navigation>

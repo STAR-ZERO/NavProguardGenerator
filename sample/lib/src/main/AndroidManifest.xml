@@ -1,0 +1,5 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.star_zero.gradle.nav_proguard_generator.sample.lib">
+
+    /
+</manifest>

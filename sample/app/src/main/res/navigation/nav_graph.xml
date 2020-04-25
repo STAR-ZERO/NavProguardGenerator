@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sampleFragment">
+
+    <fragment
+        android:id="@+id/sampleFragment"
+        android:name="com.star_zero.gradle.nav_proguard_generator.sample.SampleFragment"
+        android:label="SampleFragment">
+        <argument
+            android:name="sample"
+            app:argType="com.star_zero.gradle.nav_proguard_generator.sample.Sample" />
+        <argument
+            android:name="data"
+            app:argType="com.star_zero.gradle.nav_proguard_generator.sample.Data" />
+        <argument
+            android:name="dataArray"
+            app:argType="com.star_zero.gradle.nav_proguard_generator.sample.Data[]" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <include app:graph="@navigation/nav_graph_lib" />
+</navigation>
