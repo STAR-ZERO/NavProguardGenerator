@@ -2,7 +2,6 @@ package com.star_zero.gradle.nav_proguard_generator
 
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.BaseExtension
-import com.android.build.gradle.FeatureExtension
 import com.android.build.gradle.LibraryExtension
 import com.android.build.gradle.api.BaseVariant
 import org.gradle.api.GradleException
@@ -27,9 +26,6 @@ class NavProguardGeneratorPlugin : Plugin<Project> {
             is AppExtension -> extension.applicationVariants.all(action)
             is LibraryExtension -> {
                 extension.libraryVariants.all(action)
-                if (extension is FeatureExtension) {
-                    extension.featureVariants.all(action)
-                }
             }
         }
     }
@@ -37,7 +33,7 @@ class NavProguardGeneratorPlugin : Plugin<Project> {
     private fun addProguardFile(project: Project, extension: BaseExtension) {
         val proguardFile = File(project.projectDir, GenerateNavProguardTask.PROGUARD_FILE_NAME)
         when (extension) {
-            is AppExtension, is FeatureExtension -> {
+            is AppExtension -> {
                 extension.defaultConfig.proguardFiles.add(proguardFile)
             }
             is LibraryExtension -> {
