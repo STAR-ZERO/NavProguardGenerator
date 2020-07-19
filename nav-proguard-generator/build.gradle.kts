@@ -4,6 +4,10 @@ plugins {
     id("com.gradle.plugin-publish") version "0.11.0"
 }
 
+kotlinDslPluginOptions {
+    experimentalWarning.set(false)
+}
+
 repositories {
     google()
     jcenter()
